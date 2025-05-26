@@ -1,0 +1,223 @@
+{
+  "Semester I": {
+    "Introduction to Information Technology": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "C Programming": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Digital Logic": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Mathematics I": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Physics": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  },
+  "Semester II": {
+    "Discrete Structure": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Object-Oriented Programming": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Microprocessor": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Mathematics II": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Statistics I": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  },
+  "Semester III": {
+    "Data Structure and Algorithm": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Numerical Method": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Computer Architecture": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Computer Graphics": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Statistics II": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  },
+  "Semester IV": {
+    "Theory of Computation": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Computer Networks": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Operating Systems": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Database Management System": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Artificial Intelligence": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  },
+  "Semester V": {
+    "Design and Analysis of Algorithms": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "System Analysis and Design": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Cryptography": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Simulation and Modeling": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Web Technology": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Elective I": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  },
+  "Semester VI": {
+    "Software Engineering": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Compiler Design and Construction": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "E-Governance": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "NET Centric Computing": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Technical Writing": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Elective II": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  },
+  "Semester VII": {
+    "Advanced Java Programming": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Data Warehousing and Data Mining": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Principles of Management": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Project Work": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Elective III": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  },
+  "Semester VIII": {
+    "Advanced Database": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Internship": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Elective IV": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    },
+    "Elective V": {
+      "questions": [],
+      "notes": [],
+      "syllabus": []
+    }
+  }
+}
