@@ -4,7 +4,6 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import Resource from "./Components/Resource";
 import MainLayout from "./Layout/MainLayout";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,9 +20,11 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+    <>
+      <div>
+        <RouterProvider router={router} />
+      </div>
+    </>
   );
 };
 
