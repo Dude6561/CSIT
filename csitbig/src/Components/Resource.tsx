@@ -1,10 +1,11 @@
 import useTabStored from "../StateMgmt/State";
 import { DropDown } from "./dropDown";
+import useFilter from "../CustomHook/useFilter";
 
 const Resource = () => {
   const setActiveTab = useTabStored((state) => state.setActiveTab);
   const activeTab = useTabStored((state) => state.activeTab);
-  console.log(activeTab);
+  const { filter } = useFilter();
 
   return (
     <div>
@@ -27,6 +28,7 @@ const Resource = () => {
         >
           Syllabus
         </button>
+        <button onClick={() => filter()}>CLick to </button>
         <DropDown />
       </div>
     </div>

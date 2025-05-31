@@ -16,7 +16,7 @@ export const DropDown = () => {
               className="p-1 pl-4 pr-3 border-2 border-zinc-600 rounded"
               onChange={(e) => setDropTab(e.target.value)}
             >
-              <option value="Second"> First </option>
+              <option value="First"> First </option>
               <option value="Second"> Second </option>
               <option value="Third"> Third </option>
               <option value="Fourth"> Fourth </option>

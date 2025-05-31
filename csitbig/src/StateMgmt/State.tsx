@@ -6,15 +6,6 @@ type TabStore = {
   setActiveTab: (tab: string) => void;
   setDropTab: (drop: string) => void;
 };
-type SemInfo = {
-  [SemName: string]: {
-    [subject: string]: {
-      question: any[];
-      note: any[];
-      syllabus: any[];
-    };
-  };
-};
 
 const useTabStore = create<TabStore>((Set) => ({
   activeTab: "Questions",
@@ -22,13 +13,5 @@ const useTabStore = create<TabStore>((Set) => ({
   setDropTab: (drop: string) => Set({ dropTab: drop }),
   setActiveTab: (tab: string) => Set({ activeTab: tab }),
 }));
-const useSemStore = create<SemInfo>((Set) => ({
-  SemesterI: {
-    IntroductionToInformationTechnology: {
-      question: [],
-      note: [],
-      syllabus: [],
-    },
-  },
-}));
+
 export default useTabStore;
