@@ -1,9 +1,7 @@
-import { use } from "react";
 import useTabStore from "../StateMgmt/State";
 export const DropDown = () => {
   const setDropTab = useTabStore((state) => state.setDropTab);
   const dropTab = useTabStore((state) => state.dropTab);
-  console.log(dropTab);
 
   return (
     <div>

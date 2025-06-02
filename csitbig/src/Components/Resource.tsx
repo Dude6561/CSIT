@@ -4,7 +4,6 @@ import useFilter from "../CustomHook/useFilter";
 
 const Resource = () => {
   const setActiveTab = useTabStored((state) => state.setActiveTab);
-  const activeTab = useTabStored((state) => state.activeTab);
   const { filter } = useFilter();
 
   return (

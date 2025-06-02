@@ -6,13 +6,35 @@ function useFilter() {
   const dropTab = useTabStore((state) => state.dropTab);
   const activeTab = useTabStore((state) => state.activeTab);
   const setSemInfo = useSemStore((state) => state.setSemInfo);
-  const sem = useSemStore((state) => state.sem);
+
+  type SemesterKeys = `Semester ${
+    | "I"
+    | "II"
+    | "III"
+    | "IV"
+    | "V"
+    | "VI"
+    | "VII"
+    | "VIII"}`;
+  // creates union string
+
+  const semMap: Record<string, SemesterKeys> = {
+    First: "Semester I",
+    Second: "Semester II",
+    Third: "Semester III",
+    Fourth: "Semester IV",
+    Fifth: "Semester V",
+    Sixth: "Semester VI",
+    Seventh: "Semester VII",
+    Eighth: "Semester VIII",
+  };
+  // it contains keys and value
 
   function filter() {
-    if (activeTab === "Question" && dropTab === "First") {
-      setSemInfo({ "Semester I": data["Semester I"] });
+    const tempDropTab = semMap[dropTab]; // for getting semester from sem map record
+    if (activeTab === "Questions" && dropTab === dropTab) {
+      setSemInfo({ [tempDropTab]: data[tempDropTab] });
     }
-    console.log(sem);
   }
 
   return { filter };
