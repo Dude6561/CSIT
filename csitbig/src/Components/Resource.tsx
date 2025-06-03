@@ -1,10 +1,13 @@
 import useTabStored from "../StateMgmt/State";
 import { DropDown } from "./dropDown";
 import useFilter from "../CustomHook/useFilter";
+import useSemStore from "../StateMgmt/semState";
 
 const Resource = () => {
   const setActiveTab = useTabStored((state) => state.setActiveTab);
+  const sem = useSemStore((state) => state.sem);
   const { filter } = useFilter();
+  console.log(sem);
 
   return (
     <div>
