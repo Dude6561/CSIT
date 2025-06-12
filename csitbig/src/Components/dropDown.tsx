@@ -1,7 +1,14 @@
+import { useEffect } from "react";
 import useTabStore from "../StateMgmt/State";
+import useSemStore from "../StateMgmt/semState";
+import useFilter from "../CustomHook/useFilter";
+
 export const DropDown = () => {
   const setDropTab = useTabStore((state) => state.setDropTab);
   const dropTab = useTabStore((state) => state.dropTab);
+  const sem = useSemStore((state) => state.sem);
+
+  const { filter } = useFilter();
 
   return (
     <div>

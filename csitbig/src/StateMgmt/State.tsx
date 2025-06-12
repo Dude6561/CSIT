@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 type TabStore = {
-  activeTab: String;
+  activeTab: string;
   dropTab: string;
   setActiveTab: (tab: string) => void;
   setDropTab: (drop: string) => void;

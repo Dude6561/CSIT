@@ -6,7 +6,7 @@ const Home = () => {
     <div className=" ">
       <div className="pl-6 pt-14 md:flex  ">
         <div className="w-[610px] mx-auto md:justify-between">
-          <h1 className="text-3xl font-bold sm:text-5xl md:pt-56 ">
+          <h1 className="text-3xl font-bold sm:text-5xl md:pt-56  ">
             Welcome To <span className="text-pink-600 ">csitinfoNepal.</span>
           </h1>
 
