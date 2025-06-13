@@ -16,7 +16,7 @@ type SemInfo = {
 const useSemStore = create<SemInfo>((set) => ({
   sem: [],
   setSemInfo: (sem) => {
-    set((state) => ({ sem: [sem, ...state.sem] }));
+    set(() => ({ sem: [sem] }));
   },
 }));
 export default useSemStore;

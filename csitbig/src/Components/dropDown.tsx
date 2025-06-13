@@ -10,6 +10,41 @@ export const DropDown = () => {
 
   const { filter } = useFilter();
 
+  //for dropdown value
+  useEffect(() => {
+    filter();
+  }, [dropTab]);
+
+  // making records for easy filtering data makes dynamiclly keeping values
+  type SemesterKeys = `Semester ${
+    | "I"
+    | "II"
+    | "III"
+    | "IV"
+    | "V"
+    | "VI"
+    | "VII"
+    | "VIII"}`;
+
+  const semMap: Record<string, SemesterKeys> = {
+    First: "Semester I",
+    Second: "Semester II",
+    Third: "Semester III",
+    Fourth: "Semester IV",
+    Fifth: "Semester V",
+    Sixth: "Semester VI",
+    Seventh: "Semester VII",
+    Eighth: "Semester VIII",
+  };
+  // normal object keys was crashing because of undefined value now we first check if it exist and then we procede
+  // const Subject = sem[0]?.[semMap[dropTab]]
+  //   ? Object.keys(sem[0][semMap[dropTab]])
+  //   : [];
+  const Subject = Object.keys(
+    sem[0]?.[semMap[dropTab]] ? sem[0][semMap[dropTab]] : []
+  );
+  console.log(Subject);
+
   return (
     <div>
       <div>
@@ -19,7 +54,9 @@ export const DropDown = () => {
             <select
               name="Semester"
               className="p-1 pl-4 pr-3 border-2 border-zinc-600 rounded"
-              onChange={(e) => setDropTab(e.target.value)}
+              onChange={(e) => {
+                setDropTab(e.target.value);
+              }}
             >
               <option value="First"> First </option>
               <option value="Second"> Second </option>
@@ -38,13 +75,28 @@ export const DropDown = () => {
               name="Subject"
               className="p-1 border-2 border-zinc-600 rounded"
             >
-              <option value="First">
-                Introduction To Information Technology
-              </option>
-              <option value="First">IMaths</option>
+              {Subject.map((subject, index) => (
+                <option key={index}>{subject}</option>
+              ))}
             </select>
           </div>
         </div>
+      </div>
+      {/* showing the list  */}
+
+      <div>
+        <ul className="divide-y divide-gray-400  mt-10">
+          {Subject.map((subject, index) => (
+            <div
+              className=" w-[450px] md:w-[600px] xl:w-[900px] m-auto  h-28 hover:bg-blue-200  hover:text-white"
+              key={index}
+            >
+              <li className=" p-5 cursor-pointer font-bold  text-xl md:text-2xl">
+                {subject}
+              </li>
+            </div>
+          ))}
+        </ul>
       </div>
     </div>
   );

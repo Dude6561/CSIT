@@ -9,7 +9,7 @@ const Nav = () => {
         >
           csitInfoNepal
         </Link>
-        <div className=" space-x-4 sm:pr-4 font-montserrat ">
+        <div className=" space-x-4 sm:pr-4 font-medium">
           <Link to="/resource" className="hover:text-pink-600">
             Resource
           </Link>

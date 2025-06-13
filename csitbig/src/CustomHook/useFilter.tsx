@@ -34,6 +34,11 @@ function useFilter() {
     const tempDropTab = semMap[dropTab]; // for getting semester from sem map record
     if (activeTab === "Questions" && dropTab === dropTab) {
       setSemInfo({ [tempDropTab]: data[tempDropTab] });
+    } else if (activeTab === "Note" && dropTab === dropTab) {
+      setSemInfo({ [tempDropTab]: data[tempDropTab] });
+    } else activeTab === "Syllabus" && dropTab === dropTab;
+    {
+      setSemInfo({ [tempDropTab]: data[tempDropTab] });
     }
   }
 
