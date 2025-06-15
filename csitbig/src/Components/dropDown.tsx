@@ -7,6 +7,7 @@ export const DropDown = () => {
   const setDropTab = useTabStore((state) => state.setDropTab);
   const dropTab = useTabStore((state) => state.dropTab);
   const sem = useSemStore((state) => state.sem);
+  const setSub = useTabStore((state) => state.setSub); //capturing the change
 
   const { filter } = useFilter();
 
@@ -74,7 +75,11 @@ export const DropDown = () => {
             <select
               name="Subject"
               className="p-1 border-2 border-zinc-600 rounded"
+              onChange={(e) => {
+                setSub(e.target.value);
+              }}
             >
+              <option>All</option>
               {Subject.map((subject, index) => (
                 <option key={index}>{subject}</option>
               ))}
@@ -94,6 +99,14 @@ export const DropDown = () => {
               <li className=" p-5 cursor-pointer font-bold  text-xl md:text-2xl">
                 {subject}
               </li>
+              {/* <div className="pl-5 ">
+                <button className="bg-pink-600 text-white font-semibold pl-5 pr-5 pt-2 pb-2 rounded-4xl hover:bg-blue-700 hover:cursor-pointer">
+                  Download
+                </button>
+                <button className="bg-pink-600 text-white font-semibold pl-5 pr-5 pt-2 pb-2 rounded-4xl hover:bg-blue-700 hover:cursor-pointer">
+                  Preview
+                </button>
+              </div> */}
             </div>
           ))}
         </ul>
