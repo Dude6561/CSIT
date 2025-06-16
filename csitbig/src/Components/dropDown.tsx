@@ -80,8 +80,10 @@ export const DropDown = () => {
               }}
             >
               <option>All</option>
-              {Subject.map((subject, index) => (
-                <option key={index}>{subject}</option>
+              {Subject.map((subject) => (
+                <option key={subject} value={subject}>
+                  {subject}
+                </option>
               ))}
             </select>
           </div>
@@ -93,20 +95,20 @@ export const DropDown = () => {
         <ul className="divide-y divide-gray-400  mt-10">
           {Subject.map((subject, index) => (
             <div
-              className=" w-[450px] md:w-[600px] xl:w-[900px] m-auto  h-28 hover:bg-blue-200  hover:text-white"
+              className=" w-[450px] md:w-[600px] xl:w-[900px] m-auto  h-28 hover:bg-blue-200  hover:text-white "
               key={index}
             >
               <li className=" p-5 cursor-pointer font-bold  text-xl md:text-2xl">
                 {subject}
               </li>
-              {/* <div className="pl-5 ">
-                <button className="bg-pink-600 text-white font-semibold pl-5 pr-5 pt-2 pb-2 rounded-4xl hover:bg-blue-700 hover:cursor-pointer">
+              <div className="pl-5 space-x-3 font-bold  ">
+                <button className="bg-pink-600 text-white  pl-5 pr-5 pt-2 pb-2 rounded-[2px]  hover:bg-blue-700 hover:cursor-pointer">
                   Download
                 </button>
-                <button className="bg-pink-600 text-white font-semibold pl-5 pr-5 pt-2 pb-2 rounded-4xl hover:bg-blue-700 hover:cursor-pointer">
+                <button className="bg-pink-600 text-white  pl-5 pr-5 pt-2 pb-2 rounded-[2px]  hover:bg-blue-700 hover:cursor-pointer">
                   Preview
                 </button>
-              </div> */}
+              </div>
             </div>
           ))}
         </ul>
