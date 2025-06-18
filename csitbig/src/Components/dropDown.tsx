@@ -44,7 +44,7 @@ export const DropDown = () => {
   const Subject = Object.keys(
     sem[0]?.[semMap[dropTab]] ? sem[0][semMap[dropTab]] : []
   );
-  console.log(Subject);
+  ok
 
   return (
     <div>
