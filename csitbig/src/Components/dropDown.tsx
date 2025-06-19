@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import useTabStore from "../StateMgmt/State";
 import useSemStore from "../StateMgmt/semState";
 import useFilter from "../CustomHook/useFilter";
-
+import down from "../assets/icons8-download-32.png";
+import prev from "../assets/icons8-preview-32.png";
 export const DropDown = () => {
   const setDropTab = useTabStore((state) => state.setDropTab);
   const dropTab = useTabStore((state) => state.dropTab);
@@ -44,7 +45,6 @@ export const DropDown = () => {
   const Subject = Object.keys(
     sem[0]?.[semMap[dropTab]] ? sem[0][semMap[dropTab]] : []
   );
-  ok
 
   return (
     <div>
@@ -92,20 +92,23 @@ export const DropDown = () => {
       {/* showing the list  */}
 
       <div>
-        <ul className="divide-y divide-gray-400  mt-10">
+        <ul className="divide-y divide-gray-400  mt-10 ">
           {Subject.map((subject, index) => (
             <div
-              className=" w-[450px] md:w-[600px] xl:w-[900px] m-auto  h-28 hover:bg-blue-200  hover:text-white "
+              className=" w-[490px] pl-5 md:w-[600px] xl:w-[1000px] m-auto  h-28 hover:bg-blue-200  hover:text-white xl:flex xl:justify-between "
               key={index}
             >
-              <li className=" p-5 cursor-pointer font-bold  text-xl md:text-2xl">
+              <li className="  cursor-pointer font-bold  text-xl md:text-2xl">
                 {subject}
               </li>
-              <div className="pl-5 space-x-3 font-bold  ">
-                <button className="bg-pink-600 text-white  pl-5 pr-5 pt-2 pb-2 rounded-[2px]  hover:bg-blue-700 hover:cursor-pointer">
+              <div className=" space-x-3 font-bold  items-center  flex pt-4 ">
+                <button className="bg-pink-600 flex text-white  pl-3  pr-3 pt-2 pb-2 rounded-[3px]   hover:bg-blue-700 hover:cursor-pointer">
+                  <img src={prev} alt="download" className=" w-6  mr-1 " />{" "}
                   Download
                 </button>
-                <button className="bg-pink-600 text-white  pl-5 pr-5 pt-2 pb-2 rounded-[2px]  hover:bg-blue-700 hover:cursor-pointer">
+
+                <button className="bg-pink-600 flex text-white  pl-3  pr-3 pt-2 pb-2 rounded-[3px]  hover:bg-blue-700 hover:cursor-pointer">
+                  <img src={down} alt="download" className=" w-6 mr-1" />{" "}
                   Preview
                 </button>
               </div>
