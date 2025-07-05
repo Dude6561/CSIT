@@ -9,6 +9,8 @@ export const DropDown = () => {
   const dropTab = useTabStore((state) => state.dropTab);
   const sem = useSemStore((state) => state.sem);
   const setSub = useTabStore((state) => state.setSub); //capturing the change
+  const dropSub = useTabStore((state) => state.dropSub);
+  console.log(sem);
 
   const { filter } = useFilter();
 
@@ -42,9 +44,22 @@ export const DropDown = () => {
   // const Subject = sem[0]?.[semMap[dropTab]]
   //   ? Object.keys(sem[0][semMap[dropTab]])
   //   : [];
+
+  //gets the name of subjet only
   const Subject = Object.keys(
     sem[0]?.[semMap[dropTab]] ? sem[0][semMap[dropTab]] : []
   );
+
+  // // getting the selected subject question, note and syallabus
+  const SubjectDisplay = Object.keys(
+    sem[0]?.[semMap[dropTab]]?.[dropSub] ? sem[0][semMap[dropTab]][dropSub] : []
+  );
+  const SubjectDisplayPart = sem[0]?.[semMap[dropTab]]?.[dropSub]
+    ? sem[0][semMap[dropTab]][dropSub]
+    : [];
+  console.log(SubjectDisplayPart);
+  // const subNote
+  // const subSyallabus
 
   return (
     <div>
@@ -70,6 +85,7 @@ export const DropDown = () => {
             </select>
           </div>
 
+          {/* displaying the SUbject List */}
           <div className="flex flex-col gap-2">
             <label className="text-sm"> Subject </label>
             <select
@@ -95,7 +111,7 @@ export const DropDown = () => {
         <ul className="divide-y divide-gray-400  mt-10 ">
           {Subject.map((subject, index) => (
             <div
-              className=" w-[490px] pl-5 md:w-[600px] xl:w-[1000px] m-auto  h-28 hover:bg-blue-200  hover:text-white xl:flex xl:justify-between "
+              className=" w-[490px] pl-5 md:w-[600px] xl:w-[1200px] m-auto  h-28 hover:bg-blue-200  hover:text-white xl:flex xl:justify-between "
               key={index}
             >
               <li className="  cursor-pointer font-bold  text-xl md:text-2xl">
