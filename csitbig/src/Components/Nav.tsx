@@ -21,6 +21,7 @@ const Nav = () => {
           </Link>
         </div>
       </nav>
+      <h1>Ok</h1>
     </div>
   );
 };
