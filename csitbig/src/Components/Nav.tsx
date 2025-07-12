@@ -21,10 +21,10 @@ const Nav = () => {
           </Link>
         </div>
       </nav>
-      <h1>Ok</h1>
     </div>
   );
 };
 
 export default Nav;
 ////flex justify-between bg-black text-white font-bold pl-2 p-4 text-2xl
+// working to sift to next js
